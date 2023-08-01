@@ -3,6 +3,7 @@ console.log("Data _Structure" + name)
 
 let date = new Date();
 console.log(date)
+var logfile_name = '\LOG\Date-Info-' + date.getFullYear() + "-"+ date.getMonth() + "-" + date.getDate() +'.txt'
 
 var fs = require('fs');
 
@@ -12,7 +13,7 @@ var fs = require('fs');
 //   console.log('Saved!');
 // }); 
 
-fs.writeFile(date+".txt", 'Hello Content!!!',
+fs.writeFile(logfile_name, 'Hello Content!!!'+date,
     function (err)
     {
         if (err)
