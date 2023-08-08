@@ -43,3 +43,13 @@ FS.writeFile("./backup/note-"+i+".html", "Data Content Added___"+i, (err) =>
 })
 
 }
+
+FS.readFile("./read.txt", "utf-8", (err, data) => {
+
+    if (err)
+    {
+        console.log("Error", err);
+    }
+     console.log("The Content of the file is =>", data);
+
+});
